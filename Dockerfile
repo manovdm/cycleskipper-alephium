@@ -17,4 +17,9 @@ USER root
 RUN #sudo chown -R $(whoami) .alephium
 RUN echo "alephium.api.key = ${API_KEY}" >> .alephium/user.conf
 
-#CMD bash
+
+# Install required packages
+ #RUN curl -L https://github.com/alephium/gpu-miner/raw/master/get-miner.sh | bash
+
+#CMD /bin/bash
+ENTRYPOINT ["/bin/bash"]
