@@ -19,7 +19,9 @@ RUN echo "alephium.api.key = ${API_KEY}" >> .alephium/user.conf
 
 
 # Install required packages
- #RUN curl -L https://github.com/alephium/gpu-miner/raw/master/get-miner.sh | bash
+RUN curl -L https://github.com/alephium/gpu-miner/raw/master/get-miner.sh > get-miner.sh
+RUN chmod +x get-miner.sh
+
 
 #CMD /bin/bash
 ENTRYPOINT ["/bin/bash"]
